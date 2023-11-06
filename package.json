@@ -1,23 +1,44 @@
 {
-  "name": "typescript-package",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "devDependencies": {
-    "ts-node": "^10.9.1",
-    "typescript": "^4.8.3"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "@hexlet/typescript-package",
+  "version": "1.1.0",
+  "description": "Typescript boilerplate package",
+  "author": "Hexlet",
+  "license": "ISC",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hexlet-boilerplates/typescript-package.git"
   },
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/hexlet-boilerplates/typescript-package/issues"
   },
-  "homepage": "https://github.com/hexlet-boilerplates/typescript-package#readme"
+  "homepage": "https://github.com/hexlet-boilerplates/typescript-package#readme",
+  "main": "index.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && tsc",
+    "start:dev": "node --watch --loader=ts-node/esm ./src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "exec": "npx ts-node ./src/index.ts",
+    "lint": "npx eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.44.6",
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "npm-check-updates": "^16.14.6",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
 }
