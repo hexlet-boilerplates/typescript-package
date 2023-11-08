@@ -1,3 +1,4 @@
 /* eslint-disable no-console */
+import sum from './sum';
 
-console.log('hello world!');
+console.log(sum(3, 3));

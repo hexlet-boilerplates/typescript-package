@@ -18,7 +18,8 @@
   },
   "scripts": {
     "build": "rimraf ./dist && tsc",
-    "start:dev": "node --watch --loader=ts-node/esm ./src/index.ts",
+    "start:dev": "npx nodemon",
+    "start:dev-experimental": "node --watch --loader=ts-node/esm ./src/index.ts",
     "start": "npm run build && node dist/index.js",
     "exec": "npx ts-node ./src/index.ts",
     "lint": "npx eslint .",
@@ -39,6 +40,7 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.0.1",
+    "nodemon": "^3.0.1",
     "npm-check-updates": "^16.14.6",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.9.0",
