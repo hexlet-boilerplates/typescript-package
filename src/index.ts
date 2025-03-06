@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
-import sum from './sum';
+import sum from './sum.js'
 
-console.log(sum(3, 3));
+console.log(sum(3, 3))

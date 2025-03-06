@@ -4,6 +4,7 @@
   "description": "Typescript boilerplate package",
   "author": "Hexlet",
   "license": "ISC",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hexlet-boilerplates/typescript-package.git"
@@ -12,42 +13,36 @@
     "url": "https://github.com/hexlet-boilerplates/typescript-package/issues"
   },
   "homepage": "https://github.com/hexlet-boilerplates/typescript-package#readme",
-  "main": "index.js",
+  "main": "dist/index.js",
   "engines": {
-    "node": ">=18"
+    "node": ">=21"
   },
   "scripts": {
-    "build": "rimraf ./dist && tsc",
-    "start:dev": "npx nodemon",
-    "start:dev-experimental": "node --watch --loader=ts-node/esm ./src/index.ts",
-    "start": "npm run build && node dist/index.js",
-    "exec": "npx ts-node ./src/index.ts",
+    "build": "rm -rf ./dist && tsc",
+    "exec": "npx tsx ./src/index.ts",
     "lint": "npx eslint .",
-    "test": "vitest",
-    "test-coverage": "npx vitest run --coverage"
+    "test": "vitest"
   },
   "simple-git-hooks": {
     "pre-push": "make lint"
   },
   "devDependencies": {
-    "@types/eslint": "^8.44.6",
-    "@types/node": "^20.8.10",
-    "@typescript-eslint/eslint-plugin": "^6.10.0",
-    "@typescript-eslint/parser": "^6.10.0",
-    "@vitest/coverage-v8": "^0.34.6",
-    "eslint": "^8.53.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
-    "eslint-config-standard-with-typescript": "^39.1.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-n": "^16.3.1",
-    "eslint-plugin-promise": "^6.1.1",
-    "nodemon": "^3.0.1",
-    "npm-check-updates": "^16.14.6",
-    "rimraf": "^5.0.5",
-    "simple-git-hooks": "^2.9.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2",
-    "vitest": "^0.34.6"
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.13.9",
+    "@typescript-eslint/eslint-plugin": "^8.26.0",
+    "@typescript-eslint/parser": "^8.26.0",
+    "eslint": "^9.21.0",
+    "jiti": "^2.4.2",
+    "npm-check-updates": "^17.1.15",
+    "simple-git-hooks": "^2.11.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2",
+    "typescript-eslint": "^8.26.0",
+    "vitest": "^3.0.7"
+  },
+  "dependencies": {
+    "es-toolkit": "^1.32.0"
   }
 }
