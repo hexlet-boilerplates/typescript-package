@@ -16,8 +16,7 @@
 #
 # 2) Optimizing pull request creation — best practices for grouping updates,
 #    controlling frequency, and limiting noise in development teams.
-#    https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/optimizing-the-creation-of-pull-requests-for-dependabot-version-updates
-#
+#    https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/optimizing-pr-creation-version-updates
 # These links explain *why* we split dev/prod dependencies,
 # *how* grouping works, and what update strategies GitHub recommends
 # for real-world projects.
