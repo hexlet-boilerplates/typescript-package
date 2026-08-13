@@ -1,6 +1,6 @@
 # typescript-package
 
-<!-- TODO: add CI, Maintainability and Test Coverage badges -->
+<!-- TODO: add the Typescript CI badge -->
 
 ## Setup
 
