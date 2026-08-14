@@ -39,6 +39,8 @@ jobs:
           cache: 'npm'
       - run: make install
       - run: make lint
+        # oxlint не смотрит типы, поэтому type-aware правила заменены прогоном tsc
+      - run: make typecheck
         # Coverage thresholds live in vitest.config.ts — this step fails
         # when coverage drops below them, so the CI badge reflects coverage too
       - run: make test-coverage
