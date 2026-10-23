@@ -1,3 +1,3 @@
 import sum from "./sum.js";
 
-console.log(sum(3, 3));
+process.stdout.write(`${sum(3, 3)}\n`);
