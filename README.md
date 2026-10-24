@@ -4,9 +4,10 @@
 
 ## Setup
 
+Нужен [mise](https://mise.jdx.dev), он ставит `hk` для git-хуков.
+
 ```bash
 make install
-
 ```
 
 ## Start

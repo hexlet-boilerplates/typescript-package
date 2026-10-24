@@ -1,5 +1,6 @@
 install:
 	npm ci
+	mise exec -- hk install --mise
 
 develop:
 	npm run start:dev
