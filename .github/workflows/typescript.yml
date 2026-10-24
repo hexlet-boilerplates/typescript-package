@@ -37,6 +37,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+      # Ставит hk для git-хуков, его вызывает make install
+      - uses: jdx/mise-action@v5
       - run: make install
       - run: make lint
         # oxlint не смотрит типы, поэтому type-aware правила заменены прогоном tsc
