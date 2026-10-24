@@ -37,10 +37,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      # Ставит hk для git-хуков, его вызывает make install
+      # Ставит hk из mise.toml
       - uses: jdx/mise-action@v5
       - run: make install
-      - run: make lint
+      # Те же шаги, что в git-хуке: hk.pkl
+      - run: mise exec -- hk check --all
         # oxlint не смотрит типы, поэтому type-aware правила заменены прогоном tsc
       - run: make typecheck
         # Coverage thresholds live in vitest.config.ts — this step fails

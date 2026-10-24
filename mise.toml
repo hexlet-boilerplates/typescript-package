@@ -1,4 +1,4 @@
-# Инструменты для git-хуков. Хук pre-push запускает `make lint` (hk.pkl).
+# Инструменты проекта. hk запускает проверки из hk.pkl в git-хуках и в CI (`hk check --all`).
 [tools]
 hk = "latest"
 pkl = "latest"
