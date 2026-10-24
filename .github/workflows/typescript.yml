@@ -13,11 +13,19 @@ on:
 env:
   CI: true
 
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
 
     # The type of machine to run the job on
     runs-on: ubuntu-latest
+    timeout-minutes: 15
 
     strategy:
       # Node versions list
@@ -28,6 +36,8 @@ jobs:
         # Check-out repository under GitHub workspace
         # https://github.com/actions/checkout
       - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
         # Step's name
       - name: Use Node.js ${{ matrix.node-version }}
         # Configures the node version used on GitHub-hosted runners

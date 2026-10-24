@@ -19,6 +19,9 @@ test-coverage:
 
 lint:
 	npm run lint
+	rumdl check .
+	typos
+	jactionlint
 
 lint-fix:
 	npm run lint-fix
